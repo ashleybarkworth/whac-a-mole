@@ -1,0 +1,81 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Whac-a-mole</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+</head>
+<body>
+  <div class="title">
+    <h1>Whac-A-Mole</h1>
+  </div>
+  <br>
+  <div class="row">
+  <div class="column left">  
+    <div class="instructions">
+      <b style="font-size:30px;">Instructions</b>
+      <p>For 20 seconds, when a mole shows up, click it fast to score a point. Once the game is over, click the <b>Generate Mouse Data</b> button to download the mouse activity data file.</p>
+      <p>Press the <b>START</b> button to begin the game.</p>
+    </div>
+  </div>
+
+  <div class="column middle">
+    <button class="data">
+      <span class="front" id="start">
+        START
+      </span>
+    </button>
+    <br>
+    <br>
+    <br>
+    <div class="grid">
+      <div class="square" id="1"></div>
+      <div class="square" id="2"></div>
+      <div class="square" id="3"></div>
+      <div class="square" id="4"></div>
+      <div class="square" id="5"></div>
+      <div class="square" id="6"></div>
+      <div class="square" id="7"></div>
+      <div class="square" id="8"></div>
+      <div class="square" id="9"></div>
+    </div>
+    <br>
+    <br>
+    <div class="box">
+      <div class="scores">
+        <h2>Score:</h2><h2 id="score">0</h2>
+      </div>
+
+      <div class="time">
+        <h2>Time Left:</h2><h2 id="time-left">20</h2>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="column right">
+    <textarea placeholder="Type some stuff here, then click the 'Generate Keyboard Data' button to get the keyboard activity data" id="textStuff"></textarea>
+
+    <button class="data" id="generateKeyData">
+      <span class="front">
+        Generate Keyboard Data
+      </span>
+    </button>
+    <br>
+    <br>
+    <button class="data" id="generateMouseData">
+      <span class="front">
+        Generate Mouse Data
+      </span>
+    </button>
+  </div>
+  </div>
+
+  <script src="log.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
